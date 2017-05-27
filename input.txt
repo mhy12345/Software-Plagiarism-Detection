@@ -1,0 +1,3 @@
+Project
+projects/self_current
+projects/self_1
