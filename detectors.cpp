@@ -116,6 +116,8 @@ double ProjectDetector::compare()
 		for (int j=0;j<m;j++)
 			CF->add_edge(2+i,2+n+j,1,-mat[i][j]);
 	pair<int,double> ans = CF->min_cost_flow();
+	for (int i=0;i<n;i++)
+		delete[] mat[i];
 	delete[] mat;
 	cout<<"N="<<n<<" M="<<m<<endl;
 	cout<<"MAX FLOW:"<<ans.first<<endl;
