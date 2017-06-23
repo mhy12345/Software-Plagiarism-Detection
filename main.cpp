@@ -53,13 +53,13 @@ void InputMode()
 		ProjectDetector PD;
 		PD.init(path1,path2);
 		double res = PD.compare();
-		cout<<"RESULT:"<<res<<endl;
+		cout<<"Similarity between to project is "<<res<<endl;
 	}else if (string(mode) == "File")
 	{
 		FileDetector FD;
 		FD.init(path1,path2);
 		double res = FD.compare();
-		cout<<"RESULT:"<<res<<endl;
+		cout<<"Similarity between to project is "<<res<<endl;
 	}
 }
 

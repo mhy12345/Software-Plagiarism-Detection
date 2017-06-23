@@ -119,8 +119,5 @@ double ProjectDetector::compare()
 	for (int i=0;i<n;i++)
 		delete[] mat[i];
 	delete[] mat;
-	cout<<"N="<<n<<" M="<<m<<endl;
-	cout<<"MAX FLOW:"<<ans.first<<endl;
-	cout<<"MAX COST:"<<ans.second<<endl;
 	return pow(exp(-ans.second),2.0/ans.first);
 }

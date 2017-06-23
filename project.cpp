@@ -7,9 +7,9 @@
 #include "file.h"
 using namespace std;
 
-PProject::PProject(string _path)
+Project::Project(string _path)
 {
-	cerr<<"PProject("<<_path<<")"<<endl;
+	cerr<<"Project("<<_path<<")"<<endl;
 	path = _path;
 	FILE *output = popen(("ls "+_path).c_str(),"r");
 	char data[100];
@@ -33,7 +33,7 @@ PProject::PProject(string _path)
 	pclose(output);
 }
 
-void PProject::show_files()
+void Project::show_files()
 {
 	for (auto i : files)
 		cout<<i<<endl;

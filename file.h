@@ -4,11 +4,18 @@
 #include<set>
 using std::string;
 using std::set;
+class File
+{
+	protected:
+		string content;
+	public:
+		File(){}
+		void read_file(const char* filename);
+};
 
-class PFile
+class PFile:public File
 {
 	private:
-		string content;
 		string fp_structure;
 		set<string> st_strings;
 		string fp_nocomment_structure;
@@ -22,7 +29,6 @@ class PFile
 	public:
 		PFile(){}
 		PFile(const char* filename);
-		void read_file(const char* filename);
 		void make_fingerprint();
 		void print_fp();
 		friend double fingerprint_compare(PFile &pf1,PFile &pf2);

@@ -30,7 +30,7 @@ string PFile::hash(string str,int len)
 	return str;
 
 }
-void PFile::read_file(const char* filename)
+void File::read_file(const char* filename)
 {
 	ifstream fin(filename);
 	char buf[1000];

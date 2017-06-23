@@ -10,20 +10,24 @@ using std::map;
 using std::vector;
 using std::set;
 using std::pair;
-
-class PProject
+class Project
 {
-	private:
+	protected:
 		string path;
 		vector<string> files;
 		vector<string> ftype;
-		//map<string,string> content;
 	public:
-		PProject(string _path);
+		Project(string _path);
 		string get_path(){return path;}
 		const vector<string>& get_files(){return files;}
 		const vector<string>& get_ftype(){return ftype;}
 		void show_files();
+};
+
+class PProject:public Project
+{
+	public:
+		PProject(string _path):Project(_path){}
 };
 
 #endif
