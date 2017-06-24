@@ -1,0 +1,5 @@
+Project
+
+projects\self_2
+
+projects\self_1

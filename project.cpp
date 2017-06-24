@@ -6,10 +6,9 @@
 #include <regex>
 #include "file.h"
 #include "project.h"
-
 using namespace std;
 
-#ifndef Unix
+#ifdef QT_WIDGET
 #include <QDir>
 #include <QDebug>
 
@@ -29,7 +28,6 @@ QFileInfoList get_file_list(QString path)
 
 #endif
 
-using namespace std;
 
 Project::Project(string _path)
 {
@@ -37,7 +35,7 @@ Project::Project(string _path)
     cerr<<"Project("<<_path<<")"<<endl;
 #endif
     path = _path;
-#ifdef Unix
+#ifndef QT_WIDGET
     FILE *output = popen("ls ".c_str(),"r");
     char data[100];
     while (fgets(data,sizeof(data),output))
@@ -53,6 +51,10 @@ Project::Project(string _path)
         QString file_name = file_list.at(i).filePath();
         string str = file_name.toStdString();
 #endif
+        if (str.find("/",path.size()+1)!=-1)
+            continue;
+        if (str.find("\\",path.size()+1)!=-1)
+            continue;
         if (str.substr(str.length()-4,4) == ".cpp" || str.substr(str.length()-3,3) == ".cc" || str.substr(str.length()-4,4) == ".cxx")
         {
             files.push_back(str);
@@ -64,7 +66,7 @@ Project::Project(string _path)
             ftype.push_back("CPP Header");
         }
     }
-#ifdef Unix
+#ifndef QT_WIDGET
     pclose(output);
 #endif
 }

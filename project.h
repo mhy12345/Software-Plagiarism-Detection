@@ -27,10 +27,5 @@ class Project
         void show_files();
 };
 
-class PProject:public Project
-{
-    public:
-        PProject(string _path):Project(_path){}
-};
 
 #endif // PROJECT_H

@@ -15,16 +15,27 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        plagiarismdetectorwidget.cpp \
     detector.cpp \
-    cost_flow.cpp \
     file.cpp \
     project.cpp \
-    projectdetectormonitor.cpp
+    plagiarism_detector_widget.cpp \
+    costflow_alg.cpp \
+    detector_file.cpp \
+    strategies_file.cpp \
+    detector_project.cpp \
+    strategies_project.cpp \
+    monitor.cpp
 
-HEADERS  += plagiarismdetectorwidget.h \
-    cost_flow.h \
+HEADERS  += \
     file.h \
     project.h \
-    detectors.h \
-    projectdetectormonitor.h
+    detector.h \
+    plagiarism_detector_widget.h \
+    costflow_alg.h \
+    detector_project.h \
+    detector_file.h \
+    strategies_file.h \
+    strategies_project.h \
+    monitor.h
+
+DEFINES += QT_WIDGET

@@ -1,4 +1,4 @@
-#include "plagiarismdetectorwidget.h"
+#include "plagiarism_detector_widget.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
