@@ -5,7 +5,7 @@
 /******************************************************************************
  *
  * Using Network-maxflow-mincost algorithm to solve Maximum Matching Problem
- * Author : mhy12345
+ * Author : lyl
  *
  ******************************************************************************/
 

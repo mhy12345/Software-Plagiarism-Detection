@@ -294,5 +294,5 @@ double fingerprint_compare(PFile &pf1,PFile &pf2)
     double B = string_compare(pf1.fp_nocomment_structure,pf2.fp_nocomment_structure);
     double C = set_compare(pf1.st_strings,pf2.st_strings);
     //cout<<A<<" "<<B<<" "<<C<<endl;
-    return (A+B+C)/3.0;
+    return A*.45+B*.45+C*.1;
 }
