@@ -39,3 +39,6 @@ HEADERS  += \
     monitor.h
 
 DEFINES += QT_WIDGET
+
+DISTFILES += \
+    README.md
