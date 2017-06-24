@@ -187,7 +187,7 @@ void PFile::make_fingerprint()
             f1 = deal_comment(str);
             if (f1!="")
             {
-                fp_structure+="/";
+                fp_structure+="C";
                 detail.push_back(f1);
                 continue;
             }
