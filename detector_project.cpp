@@ -7,7 +7,7 @@
 #include <iomanip>
 #include <algorithm>
 #include <QStringListModel>
-#ifndef DEBUG
+#ifdef DEBUG
 #include <QDebug>
 #endif
 using namespace std;
@@ -105,7 +105,6 @@ double ProjectDetector::compare()
     }
     delete[] pflst1;
     delete[] pflst2;
-    qDebug() << "SS1";
     CostFlow* CF = new CostFlow();
     for (int i=0;i<n;i++)
         CF->add_edge(CostFlow::sour,2+i,1,0);
@@ -118,7 +117,6 @@ double ProjectDetector::compare()
     for (int i=0;i<n;i++)
         delete[] mat[i];
     delete[] mat;
-    qDebug() << "SS2";
     now_compare_progress = all_compare_progress;
     double result = pow(exp(-ans.second),4.0/ans.first);
     //cout<<result<<endl;
