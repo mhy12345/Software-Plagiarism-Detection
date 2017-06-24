@@ -11,13 +11,10 @@ ProjectDetectorMonitor::~ProjectDetectorMonitor()
 {
 }
 
-#include <QDebug>
-
 double ProjectDetectorMonitor::compare()
 {
     connect(this, SIGNAL(progress_update()), this, SLOT(update_monitor()));
     double temp = ProjectDetector::compare();
-    qDebug() << temp;
     detect_end();
     return temp;
 }
