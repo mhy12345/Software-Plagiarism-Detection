@@ -24,11 +24,11 @@
 
 ### monitor.h/cpp
 
-???
+工程检测类的派生类，用于监测比较算法的进度输出到界面
 
 ### plagirism_detector_widget.h/cpp
 
-???
+Qt窗口的派生类，实现用户界面
 
 ### project.h/cpp
 
