@@ -118,7 +118,7 @@ double ProjectDetector::compare()
         delete[] mat[i];
     delete[] mat;
     now_compare_progress = all_compare_progress;
-    double result = pow(exp(-ans.second),4.0/ans.first);
+    double result = pow(exp(-ans.second),1.0/ans.first);
     //cout<<result<<endl;
     result = sin((result-0.5)*3.14159265)*.5+.5;
     //cout<<result<<endl;
