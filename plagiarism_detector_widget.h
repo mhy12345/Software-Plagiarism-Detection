@@ -16,6 +16,20 @@
 /******************************************************************************
  *
  * User Interface
+ * Interface :
+ *      radio button : to choose the mode : compare files or projects(folders)
+ *      button read  : choose a file/folder for detecting
+ *                     "read from input" is to read the paths from an input text
+ *                     this text should be written as below :
+ *                          "File" / "Project" : detect mode
+ *                          path1
+ *                          path2
+ *      button detect: detect the chosen files/folders
+ * Display :
+ *      the chosen files/folders will be displayed on the right
+ *      the rate of progress (by percent) and the result of the algorithm will be displayed below the files/folders
+ *      the left two list views shows all the file names if project mode is chosen
+ *      the right area shows the similarity table between the files if project mode is chosen
  * Author : czk
  *
  ******************************************************************************/
