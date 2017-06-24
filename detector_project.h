@@ -7,7 +7,7 @@
  *
  * File Detector, Detect similarity of two project
  * Algorithm : Find fingerprint of two file and compare
- * Author : mhy12345
+ * Author : mhy12345 & czk
  *
  ******************************************************************************/
 

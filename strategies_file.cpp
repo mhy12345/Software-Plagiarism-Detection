@@ -19,20 +19,6 @@ PFile::PFile(const char* filename)
     read_file(filename);
 }
 
-string PFile::hash(string str,int len)
-{
-    assert(len<5);
-    unsigned long long mod = 1;
-    for (int i=0;i<len;i++)mod *= 26;
-    unsigned long long p = 0;
-    for (auto c : str)
-        p = (p*127+int(c))%mod;
-    for (int i=0;i<len;i++)
-        str+=p%26+'a',p/=26;
-    return str;
-
-}
-
 
 string PFile::deal_keyword(string &ss)
 {

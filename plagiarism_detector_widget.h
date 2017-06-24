@@ -13,6 +13,12 @@
 
 #include "detector.h"
 
+/******************************************************************************
+ *
+ * User Interface
+ * Author : czk
+ *
+ ******************************************************************************/
 class PlagiarismDetectorWidget : public QWidget
 {
     Q_OBJECT

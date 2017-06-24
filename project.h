@@ -13,6 +13,14 @@ using std::vector;
 using std::set;
 using std::pair;
 
+/******************************************************************************
+ *
+ * Project Base class, APIs to read all files from a projects
+ * Algorithm : Find fingerprint of two file and compare
+ * Author : mhy12345
+ *
+ ******************************************************************************/
+
 class Project
 {
     protected:

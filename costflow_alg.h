@@ -4,7 +4,7 @@
 
 /******************************************************************************
  *
- * Using Network-maxflow-maxcost algorithm to solve Maximum Matching Problem
+ * Using Network-maxflow-mincost algorithm to solve Maximum Matching Problem
  * Author : mhy12345
  *
  ******************************************************************************/
@@ -12,7 +12,7 @@
 class CostFlow
 {
     public:
-        static const int maxn = 110;
+        static const int maxn = 310;//default maximum number of nodes
         static const int sour = 0;
         static const int sink = 1;
 

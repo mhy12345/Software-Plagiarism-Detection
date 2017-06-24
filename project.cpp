@@ -51,9 +51,9 @@ Project::Project(string _path)
         QString file_name = file_list.at(i).filePath();
         string str = file_name.toStdString();
 #endif
-        if (str.find("/",path.size()+1)!=-1)
+        if (str.find("/",path.size()+1)!=string::npos)
             continue;
-        if (str.find("\\",path.size()+1)!=-1)
+        if (str.find("\\",path.size()+1)!=string::npos)
             continue;
         if (str.substr(str.length()-4,4) == ".cpp" || str.substr(str.length()-3,3) == ".cc" || str.substr(str.length()-4,4) == ".cxx")
         {

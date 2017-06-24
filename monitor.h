@@ -6,6 +6,13 @@
 #include <QProgressBar>
 #include <QTextEdit>
 
+/******************************************************************************
+ *
+ * ???
+ * Author : czk
+ *
+ ******************************************************************************/
+
 class ProjectDetectorMonitor:public ProjectDetector
 {
     Q_OBJECT
